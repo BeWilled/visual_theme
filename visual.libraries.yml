@@ -5,3 +5,8 @@ visual_styles:
   css:
     theme:
       css/styles.css: {}
+font_awsome:
+  version: 1.x
+  css:
+    theme:
+      css/font-awesome.min.css: {}
