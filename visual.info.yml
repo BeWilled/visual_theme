@@ -1,0 +1,8 @@
+name: visual
+type: theme
+description: Custom visualization
+package: Custom
+core: 8.x
+libraries:
+  - visual/visual_styles
+

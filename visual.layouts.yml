@@ -1,0 +1,41 @@
+content_layout:
+  label: Content Layout
+  category: Layouts
+  path: plugins/layouts/content_layout
+  template: content_layout
+  icon: content_layout.png
+  regions:
+    header:
+      label: Header
+    sidebar:
+      label: Sidebar
+    contentmain:
+      label: Content
+video_layout:
+  label: Video Layout
+  category: Layouts
+  path: plugins/layouts/video_layout
+  template: video_layout
+  icon: video_layout.png
+  regions:
+    header:
+      label: Header
+    sidebar:
+      label: Sidebar
+    contentmain:
+      label: Content
+    morelikethis:
+      label: More like this
+user_layout:
+  label: User Layout
+  category: Layouts
+  path: plugins/layouts/user_layout
+  template: user_layout
+  icon: user_layout.png
+  regions:
+    header:
+      label: Header
+    sidebar:
+      label: Sidebar
+    contentmain:
+      label: Content

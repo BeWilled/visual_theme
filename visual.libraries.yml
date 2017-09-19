@@ -1,0 +1,7 @@
+visual_styles:
+  version: 1.x
+  js:
+    js/visual.js: {}
+  css:
+    theme:
+      css/styles.css: {}

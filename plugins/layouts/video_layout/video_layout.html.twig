@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Template for Radix Brenham.
+ *
+ * Variables:
+ * - $css_id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ * panel of the layout. This layout supports the following sections:
+ */
+#}
+
+<div class="video{% if classes %}{{ classes }}{% endif %}{% if class %}{{ class }}{% endif %}" {% if css_id %}{{ css_id }}{% endif %}>
+
+    <div class="header">
+        <div class="header-inner">
+            {{ content.header }}
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-inner">
+            {{ content.sidebar }}
+        </div>
+    </div>
+    <div class="content-video">
+        <div class="content-inner">
+            {{ content.contentmain }}
+        </div>
+    </div>
+    <div class="content-more-like-this">
+        <div class="content-more-like-this-inner">
+            {{ content.morelikethis }}
+        </div>
+    </div>
+</div>
