@@ -14,16 +14,18 @@
 
     <div class="header">
         <div class="header-inner">
-            {{ content.header }}
+            <div class="menu-button"><div class="fa fa-bars">&nbsp</div></div>
+            <div class="header-main">{{ content.header }}</div>
+            <div class="login-categories">{{ content.login_categories }}</div>
         </div>
     </div>
 
-    <div class="sidebar">
-        <div class="sidebar-inner">
-            {{ content.sidebar }}
-        </div>
-    </div>
-    <div class="content">
+    {#<div class="sidebar">#}
+        {#<div class="sidebar-inner">#}
+            {#{{ content.sidebar }}#}
+        {#</div>#}
+    {#</div>#}
+    <div class="content clearfix">
         <div class="content-inner">
             {{ content.contentmain }}
         </div>
