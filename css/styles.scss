@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+$blanco: #fff;
+$rojo: #e21725;
+$negro: #333;
+$gris-txt: #555;
+$gris: #ddd;
+$gris-c: #f7f7f7;
+
+$m6: 670px;
+$m8: 800px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $gris-c;
+    color: $negro;
+    font-family: lato, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $rojo;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+input[type=time],
+input[type=search],
+input[type=date],
+input[type=number],
+textarea {
+    border-radius: .4em;
+    border: none;
+}
+
+.header {
+    padding: .3em;
+    background-color: $blanco;
+}
+.views-element-container {
+    position: fixed;
+    left: -100%;
+}
+.content {
+    padding: 0 .3em;
+}
+
+//HEADER
+.search-form {
+    margin: .3em 0;
+}
+#search {
+    border: 1px solid $rojo;
+    width: 87%;
+    font-size: .9em;
+    padding: .15em .3em .1em;
+}
+
+.video {
+    margin-bottom: 1em;
+    @media screen and (min-width: $m6) {
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        //margin-bottom: .3em;
+        box-sizing: border-box;
+        width: 50%;
+        min-height: 17.7em;
+        padding: 0 .2em;
+    }
+    @media screen and (min-width: $m8) {
+        width: 23em;
+        min-height: 17em;
+    }
+}
+.link {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+.image {
+    width: auto !important;
+    height: auto !important;
+    img {
+        width: 100%;
+    }
+}
+.title {
+    font-weight: 700;
+}
+
+.views,
+.ratings {
+    display: inline-block;
+    color: $negro;
+    img,
+    div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+
+.jscroll-next {
+    display: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
