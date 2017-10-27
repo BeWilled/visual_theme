@@ -54,8 +54,16 @@ $gris-txt: #555;
 $gris: #ddd;
 $gris-c: #f7f7f7;
 
+$m60: 600px;
 $m6: 670px;
+$m7: 740px;
 $m8: 800px;
+$m9: 900px;
+$m10: 1000px;
+$m12: 1250px;
+$m14: 1400px;
+$m16: 1600px;
+$m18: 1810px;
 
 body {
     margin: 0;
@@ -84,58 +92,124 @@ textarea {
 }
 
 .header {
-    padding: .3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 2em;
+    padding: 0;
     background-color: $blanco;
+    @media screen and (min-width: $m6) {
+        height: 2.5em;
+    }
 }
 .views-element-container {
     position: fixed;
     left: -100%;
 }
 .content {
-    padding: 0 .3em;
+    padding: 2em .3em 0;
+    @media screen and (min-width: $m6) {
+        padding-top: 2.5em;
+    }
 }
 
 //HEADER
+
+.menu-button {
+    color: $rojo;
+    @media screen and (max-width: $m6 - 1) {
+        position: absolute;
+        top: 50%;
+        right: .3em;
+        transform: translateY(-50%);
+    }
+    .fa{
+        font-size: 1.5em;
+    }
+}
+
+.header-main {
+    display: none;
+}
+
 .search-form {
+    display: none;
     margin: .3em 0;
 }
 #search {
     border: 1px solid $rojo;
     width: 87%;
     font-size: .9em;
-    padding: .15em .3em .1em;
+    padding: .2em .3em .1em;
 }
 
 .video {
     margin-bottom: 1em;
-    @media screen and (min-width: $m6) {
+    @media screen and (min-width: $m60) {
         display: inline-block;
         vertical-align: top;
         float: left;
         //margin-bottom: .3em;
         box-sizing: border-box;
         width: 50%;
-        min-height: 17.7em;
+        //min-height: 17.7em;
+        min-height: 38vw;
         padding: 0 .2em;
     }
-    @media screen and (min-width: $m8) {
-        width: 23em;
-        min-height: 17em;
+    @media screen and (min-width: $m7) {
+        min-height: 36vw;
     }
-}
-.link {
-    float: none !important;
-    width: auto !important;
-    height: auto !important;
-}
-.image {
-    width: auto !important;
-    height: auto !important;
-    img {
+    @media screen and (min-width: $m9) {
+        width: 33%;
+        min-height: 25vw;
+    }
+    @media screen and (min-width: $m10) {
+        min-height: 24.5vw;
+    }
+    @media screen and (min-width: $m12) {
+        width: 25%;
+        min-height: 18.9vw;
+    }
+    @media screen and (min-width: $m14) {
+        min-height: 18.4vw;
+    }
+    @media screen and (min-width: $m16) {
+        width: 20%;
+        min-height: 15.2vw;
+    }
+    @media screen and (min-width: $m18) {
+        min-height: 14.6vw;
+    }
+    .link {
+        // float: none !important;
+        // width: auto !important;
+        // height: auto !important;
+    }
+    .image {
+        position: relative;
+        // width: auto !important;
+        // height: auto !important;
+        img {
+            width: 100%;
+        }
+    }
+    .video-container {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
     }
 }
 .title {
+    max-height: 2.3em;
+    padding-top: .2em;
+    overflow: hidden;
+    line-height: 1.2;
+    font-size: 1.05em;
     font-weight: 700;
 }
 
@@ -143,11 +217,19 @@ textarea {
 .ratings {
     display: inline-block;
     color: $negro;
-    img,
+    i,
     div {
         display: inline-block;
         vertical-align: middle;
     }
+    i {
+        margin-right: .1em;
+        font-size: 1.2em;
+    }
+}
+
+.views {
+    margin-right: 1.4em;
 }
 
 
