@@ -3,14 +3,17 @@ content_layout:
   category: Layouts
   path: plugins/layouts/content_layout
   template: content_layout
-  icon: content_layout.png
+  default_region: contentmain
+  icon_map:
+    - [login_categories]
   regions:
     header:
       label: Header
-    sidebar:
-      label: Sidebar
+    login_categories:
+      label: Login Categories
     contentmain:
       label: Content
+
 video_layout:
   label: Video Layout
   category: Layouts
@@ -20,10 +23,42 @@ video_layout:
   regions:
     header:
       label: Header
-    sidebar:
-      label: Sidebar
-    contentmain:
-      label: Content
+    login_categories:
+      label: Login Categories
+    header:
+      label: Header
+    login_categories:
+      label: Login Categories
+    morelikethis:
+      label: More like this
+    title:
+      label: Title
+    share:
+      label: Share
+    favorites:
+      label: Favorites
+    player:
+      label: Player
+    rate:
+      label: Rate
+    comments:
+      label: Comments
+    views:
+      label: Views
+    duration:
+      label: Duration
+    date:
+      label: Date
+    description:
+      label: Description
+    categories:
+      label: categories
+    pornstars:
+      label: Pornsart
+    tags:
+      label: Tags
+    addcomment:
+      label: Add Comment
     morelikethis:
       label: More like this
 user_layout:

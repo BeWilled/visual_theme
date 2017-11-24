@@ -12,20 +12,30 @@
 
 <div class="video{% if classes %}{{ classes }}{% endif %}{% if class %}{{ class }}{% endif %}" {% if css_id %}{{ css_id }}{% endif %}>
 
+
     <div class="header">
         <div class="header-inner">
-            {{ content.header }}
+            <div class="menu-button"><div class="fa fa-bars">&nbsp</div></div>
+            <div class="header-main">{{ content.header }}</div>
+            <div class="login-categories">{{ content.login_categories }}</div>
         </div>
     </div>
-
-    {#<div class="sidebar">#}
-        {#<div class="sidebar-inner">#}
-            {#{{ content.sidebar }}#}
-        {#</div>#}
-    {#</div>#}
     <div class="content-video">
         <div class="content-inner">
-            {{ content.contentmain }}
+            <div class="title">{{ content.title }}</div>
+            <div class="share">{{ content.share }}</div>
+            <div class="favorites">{{ content.favorites }}</div>
+            <div class="player">{{ content.player }}</div>
+            <div class="rate">{{ content.rate }}</div>
+            <div class="comments">{{ content.comments }}</div>
+            <div class="views">{{ content.views }}</div>
+            <div class="duration">{{ content.duration }}</div>
+            <div class="date-added">{{ content.date }}</div>
+            <div class="description">{{ content.description }}</div>
+            <div class="categories">{{ content.categories }}</div>
+            <div class="pornstars">{{ content.pornstars }}</div>
+            <div class="tags">{{ content.tags }}</div>
+            <div class="add-comment">{{ content.addcomment }}</div>
         </div>
     </div>
     <div class="content-more-like-this">
