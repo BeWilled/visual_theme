@@ -97,19 +97,17 @@ textarea {
     left: 0;
     z-index: 50;
     width: 100%;
-    height: 2em;
-    padding: 0;
+    height: 2.6em;
+    padding: .3em;
+    box-sizing: border-box;
     background-color: $blanco;
     @media screen and (min-width: $m6) {
         height: 2.5em;
     }
 }
-.views-element-container {
-    position: fixed;
-    left: -100%;
-}
+
 .content {
-    padding: 2em .3em 0;
+    padding: 5em .3em 0;
     @media screen and (min-width: $m6) {
         padding-top: 2.5em;
     }
@@ -117,13 +115,14 @@ textarea {
 
 //HEADER
 
+
 .menu-button {
     color: $rojo;
     @media screen and (max-width: $m6 - 1) {
-        position: absolute;
-        top: 50%;
-        right: .3em;
-        transform: translateY(-50%);
+        float: right;
+        height: 2em;
+        padding: .2em 0 0 .5em;
+        box-sizing: border-box;
     }
     .fa{
         font-size: 1.5em;
@@ -131,20 +130,95 @@ textarea {
 }
 
 .header-main {
-    display: none;
 }
 
+.logo {
+    height: 2em;
+    float: left;
+    margin-left: .5em;
+    
+    img {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: $m6 - 1) {
+
+}
+.header.clicked .search-div,
+.search-div:not(.opened) {
+    .search-form {
+        input {
+            display: none;
+        }
+    }
+    .loop {
+        float: right;
+        height: 2em;
+        padding: .45em .5em 0;
+        box-sizing: border-box;
+    }
+}
+.header:not(.clicked) {
+    .search-div {
+        &.opened {
+            .search-form {
+                //margin: .3em 0;
+                padding: 0 .5em;
+            }
+            .loop {
+                margin-top: .3em;
+                width: 8%;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+}
 .search-form {
-    display: none;
-    margin: .3em 0;
-}
-#search {
-    border: 1px solid $rojo;
-    width: 87%;
-    font-size: .9em;
-    padding: .2em .3em .1em;
+    input {
+        vertical-align: middle;
+        margin-top: .5em;
+        border: 1px solid $rojo;
+        border-radius: .4em;
+        width: 87%;
+        font-size: .9em;
+        padding: .2em .3em .1em;
+    }
 }
 
+.login-categories {
+    position: fixed;
+    right: -100%;
+}
+.header.clicked {
+    .login-categories {
+        right: 0%;
+        top: 2.5em;
+        max-height: calc(100vh - 2.5em);
+        overflow-y: auto;
+    }
+}
+.block-region-login-categories {
+    padding: .5em .8em;
+    background-color: $blanco;
+    div:child-nth(2) {
+        a{
+            color: $gris-txt;
+        }
+    }
+}
+.views-row {
+    border-bottom: 1px solid $negro;
+    padding: .2em 0;
+    text-align: center;
+    &:first-child {
+        border-top: 1px solid $negro;
+    }
+}
+
+
+//CONTENT
 .video {
     margin-bottom: 1em;
     @media screen and (min-width: $m60) {
