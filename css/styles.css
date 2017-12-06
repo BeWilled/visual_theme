@@ -70,19 +70,16 @@ textarea {
   left: 0;
   z-index: 50;
   width: 100%;
-  height: 2em;
-  padding: 0;
+  height: 2.6em;
+  padding: .3em;
+  box-sizing: border-box;
   background-color: #fff; }
   @media screen and (min-width: 670px) {
     .header {
       height: 2.5em; } }
 
-.views-element-container {
-  position: fixed;
-  left: -100%; }
-
 .content {
-  padding: 2em .3em 0; }
+  padding: 5em .3em 0; }
   @media screen and (min-width: 670px) {
     .content {
       padding-top: 2.5em; } }
@@ -91,25 +88,69 @@ textarea {
   color: #e21725; }
   @media screen and (max-width: 669px) {
     .menu-button {
-      position: absolute;
-      top: 50%;
-      right: .3em;
-      transform: translateY(-50%); } }
+      float: right;
+      height: 2em;
+      padding: .2em 0 0 .5em;
+      box-sizing: border-box; } }
   .menu-button .fa {
     font-size: 1.5em; }
 
-.header-main {
+.logo {
+  height: 2em;
+  float: left;
+  margin-left: .5em; }
+  .logo img {
+    height: 100%; }
+
+.header.clicked .search-div .search-form input,
+.search-div:not(.opened) .search-form input {
   display: none; }
+.header.clicked .search-div .loop,
+.search-div:not(.opened) .loop {
+  float: right;
+  height: 2em;
+  padding: .45em .5em 0;
+  box-sizing: border-box; }
 
-.search-form {
-  display: none;
-  margin: .3em 0; }
+.header:not(.clicked) .search-div.opened .search-form {
+  padding: 0 .5em; }
+.header:not(.clicked) .search-div.opened .loop {
+  margin-top: .3em;
+  width: 8%;
+  text-align: center;
+  vertical-align: middle; }
 
-#search {
+.search-form input {
+  vertical-align: middle;
+  margin-top: .5em;
   border: 1px solid #e21725;
+  border-radius: .4em;
   width: 87%;
   font-size: .9em;
   padding: .2em .3em .1em; }
+
+.login-categories {
+  position: fixed;
+  right: -100%; }
+
+.header.clicked .login-categories {
+  right: 0%;
+  top: 2.5em;
+  max-height: calc(100vh - 2.5em);
+  overflow-y: auto; }
+
+.block-region-login-categories {
+  padding: .5em .8em;
+  background-color: #fff; }
+  .block-region-login-categories div:child-nth(2) a {
+    color: #555; }
+
+.views-row {
+  border-bottom: 1px solid #333;
+  padding: .2em 0;
+  text-align: center; }
+  .views-row:first-child {
+    border-top: 1px solid #333; }
 
 .video {
   margin-bottom: 1em; }
