@@ -70,7 +70,7 @@ user_layout:
   regions:
     header:
       label: Header
-    sidebar:
-      label: Sidebar
+    login_categories:
+      label: Login Categories
     contentmain:
       label: Content

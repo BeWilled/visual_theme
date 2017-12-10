@@ -10,13 +10,18 @@
  */
 #}
 
-<div class="user-layout{% if classes %}{{ classes }}{% endif %}{% if class %}{{ class }}{% endif %}" {% if css_id %}{{ css_id }}{% endif %}>
+<div class="content user-layout{% if classes %}{{ classes }}{% endif %}{% if class %}{{ class }}{% endif %}" {% if css_id %}{{ css_id }}{% endif %}>
     <div class="overlay"></div>
     <div class="header">
         <div class="header-inner">
-            {{ content.header }}
+            <div class="menu-button">
+                <div class="fa fa-bars">&nbsp</div>
+            </div>
+            <div class="header-main">{{ content.header }}</div>
+            <div class="login-categories">{{ content.login_categories }}</div>
         </div>
     </div>
+
 
     {#<div class="sidebar">#}
         {#<div class="sidebar-inner">#}
