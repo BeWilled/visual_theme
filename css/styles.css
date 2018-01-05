@@ -79,19 +79,22 @@ textarea {
       height: 2.5em; } }
 
 .content {
-  padding: 5em .3em 0; }
+  padding: 4.5em .3em 0; }
   @media screen and (min-width: 670px) {
     .content {
       padding-top: 2.5em; } }
 
 .menu-button {
-  color: #e21725; }
+  color: #e21725;
+  height: 2em;
+  padding: .2em 0 0 .5em;
+  box-sizing: border-box; }
   @media screen and (max-width: 669px) {
     .menu-button {
-      float: right;
-      height: 2em;
-      padding: .2em 0 0 .5em;
-      box-sizing: border-box; } }
+      float: right; } }
+  @media screen and (min-width: 670px) {
+    .menu-button {
+      float: left; } }
   .menu-button .fa {
     font-size: 1.5em; }
 
@@ -102,24 +105,28 @@ textarea {
   .logo img {
     height: 100%; }
 
-.header.clicked .search-div .search-form input,
-.search-div:not(.opened) .search-form input {
-  display: none; }
-.header.clicked .search-div .loop,
-.search-div:not(.opened) .loop {
-  float: right;
-  height: 2em;
-  padding: .45em .5em 0;
-  box-sizing: border-box; }
+.search-div {
+  background-color: #fff;
+  padding-bottom: .3em; }
 
-.header:not(.clicked) .search-div.opened .search-form {
-  padding: 0 .5em; }
-.header:not(.clicked) .search-div.opened .loop {
-  margin-top: .3em;
-  width: 8%;
-  text-align: center;
-  vertical-align: middle; }
+@media screen and (max-width: 669px) {
+  .header.clicked .search-div .search-form input,
+  .search-div:not(.opened) .search-form input {
+    display: none; }
+  .header.clicked .search-div .loop,
+  .search-div:not(.opened) .loop {
+    float: right;
+    height: 2em;
+    padding: .45em .5em 0;
+    box-sizing: border-box; }
 
+  .header:not(.clicked) .search-div.opened .search-form {
+    padding: 0 .5em; }
+  .header:not(.clicked) .search-div.opened .loop {
+    margin-top: .3em;
+    width: 8%;
+    text-align: center;
+    vertical-align: middle; } }
 .search-form input {
   vertical-align: middle;
   margin-top: .5em;
@@ -131,13 +138,22 @@ textarea {
 
 .login-categories {
   position: fixed;
-  right: -100%; }
-
-.header.clicked .login-categories {
-  right: 0%;
   top: 2.5em;
   max-height: calc(100vh - 2.5em);
   overflow-y: auto; }
+  @media screen and (max-width: 669px) {
+    .login-categories {
+      right: -100%; } }
+  @media screen and (min-width: 670px) {
+    .login-categories {
+      left: 0; } }
+
+@media screen and (max-width: 669px) {
+  .header.clicked .login-categories {
+    right: 0%; } }
+@media screen and (min-width: 670px) {
+  .header.clicked .login-categories {
+    left: -100%; } }
 
 .block-region-login-categories {
   padding: .5em .8em;
@@ -224,6 +240,25 @@ textarea {
 
 .views {
   margin-right: 1.4em; }
+
+.main-content.video {
+  width: 100%;
+  padding: 0; }
+
+.content-video {
+  padding-top: 3em; }
+
+.player {
+  background-color: #000; }
+  .player .video-js {
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%; }
+    @media screen and (min-width: 670px) {
+      .player .video-js {
+        margin: auto;
+        width: 70%;
+        padding-top: 39.375%; } }
 
 .jscroll-next {
   display: none; }

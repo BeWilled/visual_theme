@@ -1,7 +1,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -107,7 +107,7 @@ textarea {
 }
 
 .content {
-    padding: 5em .3em 0;
+    padding: 4.5em .3em 0;
     @media screen and (min-width: $m6) {
         padding-top: 2.5em;
     }
@@ -118,11 +118,14 @@ textarea {
 
 .menu-button {
     color: $rojo;
+    height: 2em;
+    padding: .2em 0 0 .5em;
+    box-sizing: border-box;
     @media screen and (max-width: $m6 - 1) {
         float: right;
-        height: 2em;
-        padding: .2em 0 0 .5em;
-        box-sizing: border-box;
+    }
+    @media screen and (min-width: $m6) {
+        float: left;
     }
     .fa{
         font-size: 1.5em;
@@ -142,9 +145,11 @@ textarea {
     }
 }
 
-@media screen and (max-width: $m6 - 1) {
-
+.search-div {
+    background-color: #fff;
+    padding-bottom: .3em;
 }
+@media screen and (max-width: $m6 - 1) {
 .header.clicked .search-div,
 .search-div:not(.opened) {
     .search-form {
@@ -175,6 +180,7 @@ textarea {
         }
     }
 }
+}
 .search-form {
     input {
         vertical-align: middle;
@@ -189,14 +195,24 @@ textarea {
 
 .login-categories {
     position: fixed;
-    right: -100%;
+    top: 2.5em;
+    max-height: calc(100vh - 2.5em);
+    overflow-y: auto;
+    @media screen and (max-width: $m6 - 1) {
+        right: -100%;
+    }
+    @media screen and (min-width: $m6) {
+        left: 0;
+    }
 }
 .header.clicked {
     .login-categories {
-        right: 0%;
-        top: 2.5em;
-        max-height: calc(100vh - 2.5em);
-        overflow-y: auto;
+        @media screen and (max-width: $m6 - 1) {
+            right: 0%;
+        }
+        @media screen and (min-width: $m6) {
+            left: -100%;
+        }
     }
 }
 .block-region-login-categories {
@@ -306,6 +322,32 @@ textarea {
     margin-right: 1.4em;
 }
 
+
+//SINGLE
+.main-content.video {
+    width: 100%;
+    padding: 0;
+}
+
+.content-video {
+    padding-top: 3em;
+}
+
+.player {
+    background-color: #000;
+    .video-js {
+        width: 100%;
+        height: auto;
+        padding-top: 100% / 16 * 9;
+        @media screen and (min-width: $m6) {
+            margin: auto;
+            //width: auto;
+            //height: 80vh;
+            width: 70%;
+            padding-top: 70% / 16 * 9;
+        }
+    }
+}
 
 
 .jscroll-next {
