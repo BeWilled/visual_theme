@@ -4,7 +4,7 @@
     attach: function (context, settings) {
 
       $('.main-content .header .menu-button').once('clicked').click(function() {
-        $('.main-content .header , .content-layout .overlay').toggleClass('clicked');
+        $('.main-content .header , .main-content .overlay, .main-content .content').toggleClass('clicked');
         $('.main-content .menu-button').toggleClass('clicked');
 
       });

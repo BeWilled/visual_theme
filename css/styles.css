@@ -136,6 +136,15 @@ textarea {
   font-size: .9em;
   padding: .2em .3em .1em; }
 
+@media screen and (min-width: 670px) {
+  .main-content.content-layout .login-categories {
+    left: 0; }
+  .main-content.content-layout .header.clicked .login-categories {
+    left: -100%; }
+  .main-content:not(.content-layout) .login-categories {
+    left: -100%; }
+  .main-content:not(.content-layout) .header.clicked .login-categories {
+    left: 0; } }
 .login-categories {
   position: fixed;
   top: 2.5em;
@@ -144,16 +153,10 @@ textarea {
   @media screen and (max-width: 669px) {
     .login-categories {
       right: -100%; } }
-  @media screen and (min-width: 670px) {
-    .login-categories {
-      left: 0; } }
 
 @media screen and (max-width: 669px) {
   .header.clicked .login-categories {
     right: 0%; } }
-@media screen and (min-width: 670px) {
-  .header.clicked .login-categories {
-    left: -100%; } }
 
 .block-region-login-categories {
   padding: .5em .8em;
