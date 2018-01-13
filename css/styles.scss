@@ -51,6 +51,7 @@ $blanco: #fff;
 $rojo: #e21725;
 $negro: #333;
 $gris-txt: #555;
+$gris-b: #bbb;
 $gris: #ddd;
 $gris-c: #f7f7f7;
 
@@ -218,15 +219,17 @@ textarea {
 }
 .login-categories {
     position: fixed;
-    top: 2.5em;
-    max-height: calc(100vh - 2.5em);
+    top: 2.6em;
+    max-height: calc(100vh - 2.6em);
     overflow-y: auto;
+    transition-duration: 500ms;
     @media screen and (max-width: $m6 - 1) {
+        transition-property: right;
         right: -100%;
     }
-    // @media screen and (min-width: $m6) {
-    //     left: 0;
-    // }
+    @media screen and (min-width: $m6) {
+        transition-property: left;
+    }
 }
 .header.clicked {
     .login-categories {
@@ -239,20 +242,82 @@ textarea {
     }
 }
 .block-region-login-categories {
-    padding: .5em .8em;
+    padding: .5em 1em;
     background-color: $blanco;
-    div:child-nth(2) {
-        a{
-            color: $gris-txt;
+    box-shadow: inset 0px 12px 15px -10px $gris-b;
+}
+.user-header {
+    text-align: center;
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        color: $gris-txt;
+        font-size: 1.1em;
+    }
+    .login,
+    .sign-up,
+    .logout {
+        padding: .7em .3em .9em;
+        &:before {
+            margin-right: .2em;
+            font-family: FontAwesome;
         }
+    }
+    .login {
+        &:before {
+            content: "\f007";
+        }
+    }
+    .sign-up {
+        &:before {
+            content: "\f090";
+        }
+    }
+    .logout {
+        display: block;
+        text-align: right;
+        padding-right: 1em;
+        padding-bottom: .5em;
+        &:before {
+            content: "\f08b";
+        }
+    }
+    .profile-image {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 2.5em;
+        }
+    }
+    .profile-link {
+        padding: 1em .5em;
+    }
+}
+.favorites-menu {
+    padding: .5em 0 .8em;
+    text-align: center;
+    font-size: 1.2em;
+    a {
+        color: $gris-txt;
+    }
+    .text {
+        display: inline;
+        padding-left: .5em;
     }
 }
 .views-row {
-    border-bottom: 1px solid $negro;
-    padding: .2em 0;
+    border-bottom: 2px solid $gris-b;
+    padding: .4em 1em;
     text-align: center;
     &:first-child {
-        border-top: 1px solid $negro;
+        border-top: 2px solid $gris-b;
+    }
+    &:last-child {
+        border: none;
+    }
+    a {
+        font-size: 1.2em;
     }
 }
 

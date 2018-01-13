@@ -147,29 +147,83 @@ textarea {
     left: 0; } }
 .login-categories {
   position: fixed;
-  top: 2.5em;
-  max-height: calc(100vh - 2.5em);
-  overflow-y: auto; }
+  top: 2.6em;
+  max-height: calc(100vh - 2.6em);
+  overflow-y: auto;
+  transition-duration: 500ms; }
   @media screen and (max-width: 669px) {
     .login-categories {
+      transition-property: right;
       right: -100%; } }
+  @media screen and (min-width: 670px) {
+    .login-categories {
+      transition-property: left; } }
 
 @media screen and (max-width: 669px) {
   .header.clicked .login-categories {
     right: 0%; } }
 
 .block-region-login-categories {
-  padding: .5em .8em;
-  background-color: #fff; }
-  .block-region-login-categories div:child-nth(2) a {
+  padding: .5em 1em;
+  background-color: #fff;
+  box-shadow: inset 0px 12px 15px -10px #bbb; }
+
+.user-header {
+  text-align: center; }
+  .user-header a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #555;
+    font-size: 1.1em; }
+  .user-header .login,
+  .user-header .sign-up,
+  .user-header .logout {
+    padding: .7em .3em .9em; }
+    .user-header .login:before,
+    .user-header .sign-up:before,
+    .user-header .logout:before {
+      margin-right: .2em;
+      font-family: FontAwesome; }
+  .user-header .login:before {
+    content: "\f007"; }
+  .user-header .sign-up:before {
+    content: "\f090"; }
+  .user-header .logout {
+    display: block;
+    text-align: right;
+    padding-right: 1em;
+    padding-bottom: .5em; }
+    .user-header .logout:before {
+      content: "\f08b"; }
+  .user-header .profile-image {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden; }
+    .user-header .profile-image img {
+      width: 2.5em; }
+  .user-header .profile-link {
+    padding: 1em .5em; }
+
+.favorites-menu {
+  padding: .5em 0 .8em;
+  text-align: center;
+  font-size: 1.2em; }
+  .favorites-menu a {
     color: #555; }
+  .favorites-menu .text {
+    display: inline;
+    padding-left: .5em; }
 
 .views-row {
-  border-bottom: 1px solid #333;
-  padding: .2em 0;
+  border-bottom: 2px solid #bbb;
+  padding: .4em 1em;
   text-align: center; }
   .views-row:first-child {
-    border-top: 1px solid #333; }
+    border-top: 2px solid #bbb; }
+  .views-row:last-child {
+    border: none; }
+  .views-row a {
+    font-size: 1.2em; }
 
 .video {
   margin-bottom: 1em; }
