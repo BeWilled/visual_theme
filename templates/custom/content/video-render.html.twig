@@ -1,0 +1,21 @@
+<div class="video" prom_img="{{ video.promotedi }}" vid="{{ video.id }}">
+    <a class="link" href="{{ video.url }}">
+        <div class="image" seq-src='{{ video.sequence }}' ontouchstart="rotation_start(this)"  onmouseenter="rotation_start(this)" running="false" ontouchend="rotation_stop(this)" onmouseleave="rotation_stop(this)">
+            <img src='{{ video.image }}' alt="{{ alt }}"  >
+            <div class="video-container"></div>
+        </div>
+
+        <div class="title">
+            {{ video.title }}
+        </div>
+        <div class="views">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <div class="views-count"> {{ video.views }}</div>
+        </div>
+        <div class="ratings">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            <div class="liked-percentage">{{ video.percentage }}%</div>
+
+        </div>
+    </a>
+</div>
