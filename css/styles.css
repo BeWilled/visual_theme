@@ -137,17 +137,29 @@ textarea {
   padding: .2em .3em .1em; }
 
 @media screen and (min-width: 670px) {
+  .main-content .content {
+    transition-duration: 500ms;
+    transition-property: padding-left; }
   .main-content.content-layout .login-categories {
     left: 0; }
   .main-content.content-layout .header.clicked .login-categories {
-    left: -100%; }
+    left: -15em; }
+  .main-content.content-layout .content {
+    padding-left: 14.5em; }
+  .main-content.content-layout .content.clicked {
+    padding-left: .3em; }
   .main-content:not(.content-layout) .login-categories {
-    left: -100%; }
+    left: -15em; }
   .main-content:not(.content-layout) .header.clicked .login-categories {
-    left: 0; } }
+    left: 0; }
+  .main-content:not(.content-layout) .content {
+    padding-left: .3em; }
+  .main-content:not(.content-layout) .content.clicked {
+    padding-left: 14.5em; } }
 .login-categories {
   position: fixed;
   top: 2.6em;
+  max-width: 14.5em;
   max-height: calc(100vh - 2.6em);
   overflow-y: auto;
   transition-duration: 500ms; }
@@ -157,7 +169,8 @@ textarea {
       right: -100%; } }
   @media screen and (min-width: 670px) {
     .login-categories {
-      transition-property: left; } }
+      transition-property: left;
+      top: 2.5em; } }
 
 @media screen and (max-width: 669px) {
   .header.clicked .login-categories {
@@ -225,6 +238,50 @@ textarea {
   .views-row a {
     font-size: 1.2em; }
 
+@media screen and (min-width: 670px) {
+  .main-content.content-layout .content .video {
+    width: 100%; } }
+@media screen and (min-width: 800px) {
+  .main-content.content-layout .content .video {
+    width: 50%;
+    min-height: 28vw; } }
+@media screen and (min-width: 1250px) {
+  .main-content.content-layout .content .video {
+    width: 33%;
+    min-height: 20vw; } }
+@media screen and (min-width: 1400px) {
+  .main-content.content-layout .content .video {
+    width: 25%;
+    min-height: 16.5vw; } }
+@media screen and (min-width: 1810px) {
+  .main-content.content-layout .content .video {
+    width: 20%;
+    min-height: 13.2vw; } }
+@media screen and (min-width: 740px) {
+  .main-content.content-layout .content.clicked .video {
+    min-height: 36vw; } }
+@media screen and (min-width: 900px) {
+  .main-content.content-layout .content.clicked .video {
+    width: 33%;
+    min-height: 25vw; } }
+@media screen and (min-width: 1000px) {
+  .main-content.content-layout .content.clicked .video {
+    min-height: 24.5vw; } }
+@media screen and (min-width: 1250px) {
+  .main-content.content-layout .content.clicked .video {
+    width: 25%;
+    min-height: 18.9vw; } }
+@media screen and (min-width: 1400px) {
+  .main-content.content-layout .content.clicked .video {
+    min-height: 18.4vw; } }
+@media screen and (min-width: 1600px) {
+  .main-content.content-layout .content.clicked .video {
+    width: 20%;
+    min-height: 15.2vw; } }
+@media screen and (min-width: 1810px) {
+  .main-content.content-layout .content.clicked .video {
+    min-height: 14.6vw; } }
+
 .video {
   margin-bottom: 1em; }
   @media screen and (min-width: 600px) {
@@ -236,30 +293,6 @@ textarea {
       width: 50%;
       min-height: 38vw;
       padding: 0 .2em; } }
-  @media screen and (min-width: 740px) {
-    .video {
-      min-height: 36vw; } }
-  @media screen and (min-width: 900px) {
-    .video {
-      width: 33%;
-      min-height: 25vw; } }
-  @media screen and (min-width: 1000px) {
-    .video {
-      min-height: 24.5vw; } }
-  @media screen and (min-width: 1250px) {
-    .video {
-      width: 25%;
-      min-height: 18.9vw; } }
-  @media screen and (min-width: 1400px) {
-    .video {
-      min-height: 18.4vw; } }
-  @media screen and (min-width: 1600px) {
-    .video {
-      width: 20%;
-      min-height: 15.2vw; } }
-  @media screen and (min-width: 1810px) {
-    .video {
-      min-height: 14.6vw; } }
   .video .image {
     position: relative; }
     .video .image img {
@@ -317,6 +350,17 @@ textarea {
         width: 70%;
         padding-top: 39.375%; } }
 
+@media screen and (min-width: 670px) {
+  ::-webkit-scrollbar {
+    width: 0.5em; }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ddd;
+    margin-left: 0.1em; }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.5em;
+    background-color: #e21725; } }
 .jscroll-next {
   display: none; }
 

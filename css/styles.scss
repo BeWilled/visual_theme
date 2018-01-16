@@ -195,24 +195,40 @@ textarea {
 }
 @media screen and (min-width: $m6) {
     .main-content{
+        .content {
+            transition-duration: 500ms;
+            transition-property: padding-left;
+        }
         &.content-layout {
             .login-categories {
                 left: 0;
             }
             .header.clicked {
                 .login-categories {
-                    left: -100%;
+                    left: -15em;
                 }
+            }
+            .content {
+                padding-left: 14.5em;
+            }
+            .content.clicked {
+                padding-left: .3em;
             }
         }
         &:not(.content-layout) {
             .login-categories {
-                left: -100%;
+                left: -15em;
             }
             .header.clicked {
                 .login-categories {
                     left: 0;
                 }
+            }
+            .content {
+                padding-left: .3em;
+            }
+            .content.clicked {
+                padding-left: 14.5em;
             }
         }
     }
@@ -220,6 +236,7 @@ textarea {
 .login-categories {
     position: fixed;
     top: 2.6em;
+    max-width: 14.5em;
     max-height: calc(100vh - 2.6em);
     overflow-y: auto;
     transition-duration: 500ms;
@@ -229,6 +246,7 @@ textarea {
     }
     @media screen and (min-width: $m6) {
         transition-property: left;
+        top: 2.5em;
     }
 }
 .header.clicked {
@@ -321,8 +339,61 @@ textarea {
     }
 }
 
-
 //CONTENT
+//232
+.main-content.content-layout {
+    .content {
+        .video {
+            @media screen and (min-width: $m6) {
+                width: 100%;
+            }
+            @media screen and (min-width: $m8) {
+                width: 50%;
+                min-height: 28vw;
+            }
+            @media screen and (min-width: $m12) {
+                width: 33%;
+                min-height: 20vw;
+            }
+            @media screen and (min-width: $m14) {
+                width: 25%;
+                min-height: 16.5vw;
+            }
+            @media screen and (min-width: $m18) {
+                width: 20%;
+                min-height: 13.2vw;
+            }
+        }
+    }
+    .content.clicked {
+        .video {
+            @media screen and (min-width: $m7) {
+                min-height: 36vw;
+            }
+            @media screen and (min-width: $m9) {
+                width: 33%;
+                min-height: 25vw;
+            }
+            @media screen and (min-width: $m10) {
+                min-height: 24.5vw;
+            }
+            @media screen and (min-width: $m12) {
+                width: 25%;
+                min-height: 18.9vw;
+            }
+            @media screen and (min-width: $m14) {
+                min-height: 18.4vw;
+            }
+            @media screen and (min-width: $m16) {
+                width: 20%;
+                min-height: 15.2vw;
+            }
+            @media screen and (min-width: $m18) {
+                min-height: 14.6vw;
+            }
+        }
+    }
+}
 .video {
     margin-bottom: 1em;
     @media screen and (min-width: $m60) {
@@ -336,39 +407,8 @@ textarea {
         min-height: 38vw;
         padding: 0 .2em;
     }
-    @media screen and (min-width: $m7) {
-        min-height: 36vw;
-    }
-    @media screen and (min-width: $m9) {
-        width: 33%;
-        min-height: 25vw;
-    }
-    @media screen and (min-width: $m10) {
-        min-height: 24.5vw;
-    }
-    @media screen and (min-width: $m12) {
-        width: 25%;
-        min-height: 18.9vw;
-    }
-    @media screen and (min-width: $m14) {
-        min-height: 18.4vw;
-    }
-    @media screen and (min-width: $m16) {
-        width: 20%;
-        min-height: 15.2vw;
-    }
-    @media screen and (min-width: $m18) {
-        min-height: 14.6vw;
-    }
-    .link {
-        // float: none !important;
-        // width: auto !important;
-        // height: auto !important;
-    }
     .image {
         position: relative;
-        // width: auto !important;
-        // height: auto !important;
         img {
             width: 100%;
         }
@@ -437,6 +477,21 @@ textarea {
     }
 }
 
+//SCROLLBAR
+@media screen and (min-width: $m6) {
+    ::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    ::-webkit-scrollbar-track {
+        //border-radius: 0.5em;
+        background-color: $gris;
+        margin-left: 0.1em;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0.5em;
+        background-color: $rojo;
+    }
+}
 
 .jscroll-next {
     display: none;
