@@ -1,5 +1,5 @@
 <?php
-
+use Detection\MobileDetect;
 /**
  * @file
  * Functions to support theming in the visual theme.
@@ -32,13 +32,6 @@ function visual_page_attachments_alter(array &$page) {
     ],
   ];
   $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
-}
-
-/**
- * Implements hook_preprocess_page() for page.html.twig.
- */
-function visual_preprocess_page(array &$variables) {
-
 }
 
 /**

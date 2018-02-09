@@ -1,0 +1,18 @@
+
+<div class="video" prom_img="{{ video.promotedi }}" vid="{{ video.id }}">
+    <div class="link" href="{{ video.url }}">
+        <video
+                id="player-{{ video.id }}"
+                class="video-js"
+                controls
+                preload="none"
+                data-setup='{}'>
+            <source src="{{ video.hlsurl }}" type="application/x-mpegURL"></source>
+        </video>
+
+        <script>
+            videojs('player-{{ video.id }}');
+        </script>
+        </div>
+    </div>
+</div>

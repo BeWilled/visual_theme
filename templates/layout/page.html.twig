@@ -60,29 +60,36 @@
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
     <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+      <div class="main-content content-layout{% if classes %}{{ classes }}{% endif %}{% if class %}{{ class }}{% endif %}" {% if css_id %}{{ css_id }}{% endif %}>
+        <div class="overlay"></div>
+        <div class="header">
+          <div class="header-inner">
+            <div class="menu-button">
+              <div class="fa fa-bars"></div>
+            </div>
+            <div class="header-main">
+              <div class="logo"><img src="http://files.softicons.com/download/social-media-icons/simple-icons-by-dan-leech/png/128x128/wordpress.png" /></div>
+                {{ drupal_block('search_block') }}
+            </div>
+            <div class="login-categories">
+                {{ drupal_block('user_header_block') }}
+                {{ drupal_view('categories', 'block_1') }}
+            </div>
+          </div>
+        </div>
+        <div class="content clearfix">
+          <div class="content-inner">
+              {{ page.content }}
+          </div>
+        </div>
+      </div>
+    </div>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+
+
 
   </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
 
 </div>{# /.layout-container #}
