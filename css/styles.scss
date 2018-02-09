@@ -91,6 +91,9 @@ textarea {
     border-radius: .4em;
     border: none;
 }
+textarea {
+    max-width: 100%;
+}
 
 .header {
     position: fixed;
