@@ -49,6 +49,7 @@ textarea {
    ========================================================================== */
 $blanco: #fff;
 $rojo: #e21725;
+$rojo-a: rgba(226,23,37,.7);
 $negro: #333;
 $gris-txt: #555;
 $gris-b: #bbb;
@@ -110,8 +111,9 @@ textarea {
     }
 }
 
-.content {
-    padding: 4.5em .3em 0;
+.content,
+.content-video {
+    padding: 4.5em 0 0;
     @media screen and (min-width: $m6) {
         padding-top: 2.5em;
     }
@@ -152,6 +154,9 @@ textarea {
 .search-div {
     background-color: #fff;
     padding-bottom: .3em;
+    .loop {
+        color: $rojo;
+    }
 }
 @media screen and (max-width: $m6 - 1) {
     .header.clicked .search-div,
@@ -327,18 +332,20 @@ textarea {
         padding-left: .5em;
     }
 }
-.views-row {
-    border-bottom: 2px solid $gris-b;
-    padding: .4em 1em;
-    text-align: center;
-    &:first-child {
-        border-top: 2px solid $gris-b;
-    }
-    &:last-child {
-        border: none;
-    }
-    a {
-        font-size: 1.2em;
+.login-categories {
+    .views-row {
+        border-bottom: 2px solid $gris-b;
+        padding: .4em 1em;
+        text-align: center;
+        &:first-child {
+            border-top: 2px solid $gris-b;
+        }
+        &:last-child {
+            border: none;
+        }
+        a {
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -425,6 +432,11 @@ textarea {
         height: 100%;
     }
 }
+
+.video-info {
+    padding: 0 .3em;
+}
+
 .title {
     max-height: 2.3em;
     padding-top: .2em;
@@ -432,6 +444,7 @@ textarea {
     line-height: 1.2;
     font-size: 1.05em;
     font-weight: 700;
+    color: $rojo;
 }
 
 .views,
@@ -453,15 +466,68 @@ textarea {
     margin-right: 1.4em;
 }
 
+.video-content {
+    position: relative;
+    .preview-button {
+        position: absolute;
+        top: .3em;
+        right: .3em;
+        border-radius: 1em;
+        padding: 0 .3em .1em;
+        background-color: $rojo;
+        color: #fff;
+        &:before {
+            margin-right: .2em;
+        }
+    }
+    .extras {
+        padding-top: .3em;
+        .top {
+            .picture,
+            .user-title {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .picture {
+                position: relative;
+                border-radius: 50%;
+                width: 13%;
+                overflow: hidden;
+                padding-top: 13%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .user-title {
+                width: 86%;
+                box-sizing: border-box;
+                padding-left: .5em;
+                .title {
+                    color: $rojo;
+                }
+                .user {
+                    font-size: .8em;
+                    color: $gris;
+                }
+            }
+        }
+        .taxonomy {
 
-//SINGLE
-.main-content.video {
-    width: 100%;
-    padding: 0;
+        }
+    }
+    .last-row {
+
+    }
 }
 
+//SINGLE
+
 .content-video {
-    padding-top: 3em;
+    //padding-top: 3em;
 }
 
 .player {
@@ -478,6 +544,11 @@ textarea {
             padding-top: 70% / 16 * 9;
         }
     }
+}
+
+.duration,
+.date-added {
+    display: inline-block;
 }
 
 //SCROLLBAR

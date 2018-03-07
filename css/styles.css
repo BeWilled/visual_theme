@@ -81,10 +81,12 @@ textarea {
     .header {
       height: 2.5em; } }
 
-.content {
-  padding: 4.5em .3em 0; }
+.content,
+.content-video {
+  padding: 4.5em 0 0; }
   @media screen and (min-width: 670px) {
-    .content {
+    .content,
+    .content-video {
       padding-top: 2.5em; } }
 
 .menu-button {
@@ -111,6 +113,8 @@ textarea {
 .search-div {
   background-color: #fff;
   padding-bottom: .3em; }
+  .search-div .loop {
+    color: #e21725; }
 
 @media screen and (max-width: 669px) {
   .header.clicked .search-div .search-form input,
@@ -230,15 +234,15 @@ textarea {
     display: inline;
     padding-left: .5em; }
 
-.views-row {
+.login-categories .views-row {
   border-bottom: 2px solid #bbb;
   padding: .4em 1em;
   text-align: center; }
-  .views-row:first-child {
+  .login-categories .views-row:first-child {
     border-top: 2px solid #bbb; }
-  .views-row:last-child {
+  .login-categories .views-row:last-child {
     border: none; }
-  .views-row a {
+  .login-categories .views-row a {
     font-size: 1.2em; }
 
 @media screen and (min-width: 670px) {
@@ -308,13 +312,17 @@ textarea {
     width: 100%;
     height: 100%; }
 
+.video-info {
+  padding: 0 .3em; }
+
 .title {
   max-height: 2.3em;
   padding-top: .2em;
   overflow: hidden;
   line-height: 1.2;
   font-size: 1.05em;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #e21725; }
 
 .views,
 .ratings {
@@ -334,12 +342,45 @@ textarea {
 .views {
   margin-right: 1.4em; }
 
-.main-content.video {
-  width: 100%;
-  padding: 0; }
-
-.content-video {
-  padding-top: 3em; }
+.video-content {
+  position: relative; }
+  .video-content .preview-button {
+    position: absolute;
+    top: .3em;
+    right: .3em;
+    border-radius: 1em;
+    padding: 0 .3em .1em;
+    background-color: #e21725;
+    color: #fff; }
+    .video-content .preview-button:before {
+      margin-right: .2em; }
+  .video-content .extras {
+    padding-top: .3em; }
+    .video-content .extras .top .picture,
+    .video-content .extras .top .user-title {
+      display: inline-block;
+      vertical-align: top; }
+    .video-content .extras .top .picture {
+      position: relative;
+      border-radius: 50%;
+      width: 13%;
+      overflow: hidden;
+      padding-top: 13%; }
+      .video-content .extras .top .picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto; }
+    .video-content .extras .top .user-title {
+      width: 86%;
+      box-sizing: border-box;
+      padding-left: .5em; }
+      .video-content .extras .top .user-title .title {
+        color: #e21725; }
+      .video-content .extras .top .user-title .user {
+        font-size: .8em;
+        color: #ddd; }
 
 .player {
   background-color: #000; }
@@ -352,6 +393,10 @@ textarea {
         margin: auto;
         width: 70%;
         padding-top: 39.375%; } }
+
+.duration,
+.date-added {
+  display: inline-block; }
 
 @media screen and (min-width: 670px) {
   ::-webkit-scrollbar {
