@@ -363,47 +363,47 @@ textarea {
             }
             @media screen and (min-width: $m8) {
                 width: 50%;
-                min-height: 28vw;
+                min-height: 30.5vw;
             }
             @media screen and (min-width: $m12) {
                 width: 33%;
-                min-height: 20vw;
+                min-height: 21.8vw;
             }
             @media screen and (min-width: $m14) {
                 width: 25%;
-                min-height: 16.5vw;
+                min-height: 17.5vw;
             }
             @media screen and (min-width: $m18) {
                 width: 20%;
-                min-height: 13.2vw;
+                min-height: 14.5vw;
             }
         }
     }
     .content.clicked {
         .video {
             @media screen and (min-width: $m7) {
-                min-height: 36vw;
+                min-height: 38.2vw;
             }
             @media screen and (min-width: $m9) {
                 width: 33%;
-                min-height: 25vw;
+                min-height: 28vw;
             }
             @media screen and (min-width: $m10) {
-                min-height: 24.5vw;
+                min-height: 27vw;
             }
             @media screen and (min-width: $m12) {
                 width: 25%;
-                min-height: 18.9vw;
+                min-height: 20.5vw;
             }
             @media screen and (min-width: $m14) {
-                min-height: 18.4vw;
+                //min-height: 18.4vw;
             }
             @media screen and (min-width: $m16) {
                 width: 20%;
-                min-height: 15.2vw;
+                min-height: 17vw;
             }
             @media screen and (min-width: $m18) {
-                min-height: 14.6vw;
+                min-height: 16vw;
             }
         }
     }
@@ -494,7 +494,7 @@ textarea {
         }
     }
     .extras {
-        padding-top: .3em;
+        padding: .3em;
         .top {
             .picture,
             .user-title {
@@ -524,16 +524,77 @@ textarea {
                 }
                 .user {
                     font-size: .8em;
-                    color: $gris;
+                    a {
+                        color: $gris-txt;
+                    }
                 }
             }
         }
         .taxonomy {
-
+            .label {
+                display: inline;
+                i {
+                    margin-left: .3em;
+                }
+            }
+            .tag-list {
+                display: inline;
+            }
         }
     }
     .last-row {
-
+        padding-bottom: 1em;
+        text-align: center;
+        .like,
+        .comments-btn,
+        .share-widget {
+            display: inline-block;
+            vertical-align: middle;
+            i {
+                margin-left: .3em;
+            }
+        }
+        .like {
+            .rate-field-container {
+                position: relative;
+                padding-left: 1.7em;
+                padding-top: .2em;
+            }
+            .total-votes {
+                position: absolute;
+                color: $gris-txt;
+            }
+            .thumbs {
+                font-size: 1.6em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $rojo;
+            }
+        }
+        .comments-btn {
+            margin: 0 10vw;
+            span {
+                margin-left: .2em;
+                color: $gris-txt;
+            }
+        }
+        .share-widget {
+            position: relative;
+            .share-btn{
+                color: $rojo;
+            }
+            .share-pop {
+                position: absolute;
+                bottom: 75%;
+                right: 0;
+                min-width: 10em;
+                text-align: right;
+                a {
+                    font-size: 2.5em;
+                }
+            }
+        }
     }
 }
 
