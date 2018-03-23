@@ -172,7 +172,16 @@ textarea {
   max-width: 14.5em;
   max-height: calc(100vh - 2.6em);
   overflow-y: auto;
-  transition-duration: 500ms; }
+  transition-duration: 500ms;
+  background-color: #fff; }
+  .login-categories:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .5em;
+    background: linear-gradient(#dedede, #fff); }
   @media screen and (max-width: 669px) {
     .login-categories {
       transition-property: right;
@@ -181,6 +190,18 @@ textarea {
     .login-categories {
       transition-property: left;
       top: 2.5em; } }
+  .login-categories .views-element-container {
+    padding: 0 1em; }
+  .login-categories .views-row {
+    border-bottom: 2px solid #bbb;
+    padding: .4em 0;
+    text-align: center; }
+    .login-categories .views-row:first-child {
+      border-top: 2px solid #bbb; }
+    .login-categories .views-row:last-child {
+      border: none; }
+    .login-categories .views-row a {
+      font-size: 1.2em; }
 
 @media screen and (max-width: 669px) {
   .header.clicked .login-categories {
@@ -236,17 +257,6 @@ textarea {
   .favorites-menu .text {
     display: inline;
     padding-left: .5em; }
-
-.login-categories .views-row {
-  border-bottom: 2px solid #bbb;
-  padding: .4em 1em;
-  text-align: center; }
-  .login-categories .views-row:first-child {
-    border-top: 2px solid #bbb; }
-  .login-categories .views-row:last-child {
-    border: none; }
-  .login-categories .views-row a {
-    font-size: 1.2em; }
 
 @media screen and (min-width: 670px) {
   .main-content.content-layout .content .video {
@@ -439,6 +449,9 @@ textarea {
           font-size: 2.5em; }
           .video-content .last-row .share-widget .share-pop a:last-of-type i {
             margin: 0; }
+          .video-content .last-row .share-widget .share-pop a i {
+            background: white;
+            text-shadow: 0 0 0.5em #bbb; }
 
 .comment-modal {
   background-color: #ddd;

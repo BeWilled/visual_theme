@@ -252,6 +252,16 @@ textarea {
     max-height: calc(100vh - 2.6em);
     overflow-y: auto;
     transition-duration: 500ms;
+    background-color: #fff;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: .5em;
+        background: linear-gradient(#dedede, #fff);
+    }
     @media screen and (max-width: $m6 - 1) {
         transition-property: right;
         right: -100%;
@@ -259,6 +269,23 @@ textarea {
     @media screen and (min-width: $m6) {
         transition-property: left;
         top: 2.5em;
+    }
+    .views-element-container {
+        padding: 0 1em;
+    }
+    .views-row {
+        border-bottom: 2px solid $gris-b;
+        padding: .4em 0;
+        text-align: center;
+        &:first-child {
+            border-top: 2px solid $gris-b;
+        }
+        &:last-child {
+            border: none;
+        }
+        a {
+            font-size: 1.2em;
+        }
     }
 }
 .header.clicked {
@@ -334,22 +361,6 @@ textarea {
     .text {
         display: inline;
         padding-left: .5em;
-    }
-}
-.login-categories {
-    .views-row {
-        border-bottom: 2px solid $gris-b;
-        padding: .4em 1em;
-        text-align: center;
-        &:first-child {
-            border-top: 2px solid $gris-b;
-        }
-        &:last-child {
-            border: none;
-        }
-        a {
-            font-size: 1.2em;
-        }
     }
 }
 
@@ -596,6 +607,10 @@ textarea {
                         i {
                             margin: 0;
                         }
+                    }
+                    i {
+                        background: white;
+                        text-shadow: 0 0 0.5em $gris-b;
                     }
                 }
             }
