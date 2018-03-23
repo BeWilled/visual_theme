@@ -22,7 +22,10 @@
       });
       $('.main-content .header .search-div .loop').once('clicked').click(function() {
         $('.main-content .header .header-inner .search-div').toggleClass('opened');
-      })
+      });
+      $('.share-widget .share-btn').once('clicked').click(function() {
+        $(this).siblings('.share-pop').fadeToggle();
+      });
     }
   };
 }(jQuery));
