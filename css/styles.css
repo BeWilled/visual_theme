@@ -412,7 +412,6 @@ textarea {
       padding-left: 1.7em;
       padding-top: .2em; }
     .video-content .last-row .like .total-votes {
-      position: absolute;
       color: #555; }
     .video-content .last-row .like .thumbs {
       font-size: 1.6em;
@@ -430,13 +429,16 @@ textarea {
       .video-content .last-row .share-widget .share-btn {
         color: #e21725; }
       .video-content .last-row .share-widget .share-pop {
+        display: none;
         position: absolute;
-        bottom: 75%;
+        bottom: 100%;
         right: 0;
-        min-width: 10em;
+        min-width: 14em;
         text-align: right; }
         .video-content .last-row .share-widget .share-pop a {
           font-size: 2.5em; }
+          .video-content .last-row .share-widget .share-pop a:last-of-type i {
+            margin: 0; }
 
 .comment-modal {
   background-color: #ddd;

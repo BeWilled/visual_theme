@@ -561,7 +561,6 @@ textarea {
                 padding-top: .2em;
             }
             .total-votes {
-                position: absolute;
                 color: $gris-txt;
             }
             .thumbs {
@@ -585,13 +584,19 @@ textarea {
                 color: $rojo;
             }
             .share-pop {
+                display: none;
                 position: absolute;
-                bottom: 75%;
+                bottom: 100%;
                 right: 0;
-                min-width: 10em;
+                min-width: 14em;
                 text-align: right;
                 a {
                     font-size: 2.5em;
+                    &:last-of-type {
+                        i {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
