@@ -598,6 +598,41 @@ textarea {
     }
 }
 
+.comment-modal {
+    background-color: $gris;
+    border-radius: 1em;
+    overflow: hidden;
+    box-sizing: border-box;
+    &.ui-widget.ui-widget-content {
+        border: none;
+    }
+    .ui-dialog-titlebar {
+        background: none;
+        border: none;
+        button {
+            background: none;
+            border: none;
+        }
+    }
+    .ui-dialog-buttonpane {
+        background: none;
+        border: none;
+        button {
+            margin-top: 0;
+            margin-right: 0;
+            border-radius: .4em;
+            padding: .5em .5em .3em;
+            background: $rojo;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+}
+.ui-widget-overlay {
+    background: #000;
+    opacity: .8;
+}
+
 //SINGLE
 
 .content-video {

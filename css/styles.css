@@ -254,43 +254,40 @@ textarea {
 @media screen and (min-width: 800px) {
   .main-content.content-layout .content .video {
     width: 50%;
-    min-height: 28vw; } }
+    min-height: 30.5vw; } }
 @media screen and (min-width: 1250px) {
   .main-content.content-layout .content .video {
     width: 33%;
-    min-height: 20vw; } }
+    min-height: 21.8vw; } }
 @media screen and (min-width: 1400px) {
   .main-content.content-layout .content .video {
     width: 25%;
-    min-height: 16.5vw; } }
+    min-height: 17.5vw; } }
 @media screen and (min-width: 1810px) {
   .main-content.content-layout .content .video {
     width: 20%;
-    min-height: 13.2vw; } }
+    min-height: 14.5vw; } }
 @media screen and (min-width: 740px) {
   .main-content.content-layout .content.clicked .video {
-    min-height: 36vw; } }
+    min-height: 38.2vw; } }
 @media screen and (min-width: 900px) {
   .main-content.content-layout .content.clicked .video {
     width: 33%;
-    min-height: 25vw; } }
+    min-height: 28vw; } }
 @media screen and (min-width: 1000px) {
   .main-content.content-layout .content.clicked .video {
-    min-height: 24.5vw; } }
+    min-height: 27vw; } }
 @media screen and (min-width: 1250px) {
   .main-content.content-layout .content.clicked .video {
     width: 25%;
-    min-height: 18.9vw; } }
-@media screen and (min-width: 1400px) {
-  .main-content.content-layout .content.clicked .video {
-    min-height: 18.4vw; } }
+    min-height: 20.5vw; } }
 @media screen and (min-width: 1600px) {
   .main-content.content-layout .content.clicked .video {
     width: 20%;
-    min-height: 15.2vw; } }
+    min-height: 17vw; } }
 @media screen and (min-width: 1810px) {
   .main-content.content-layout .content.clicked .video {
-    min-height: 14.6vw; } }
+    min-height: 16vw; } }
 
 .video {
   margin-bottom: 1em; }
@@ -365,7 +362,7 @@ textarea {
     .video-content .preview-button:before {
       margin-right: .2em; }
   .video-content .extras {
-    padding-top: .3em; }
+    padding: .3em; }
     .video-content .extras .top .picture,
     .video-content .extras .top .user-title {
       display: inline-block;
@@ -389,8 +386,86 @@ textarea {
       .video-content .extras .top .user-title .title {
         color: #e21725; }
       .video-content .extras .top .user-title .user {
-        font-size: .8em;
-        color: #ddd; }
+        font-size: .8em; }
+        .video-content .extras .top .user-title .user a {
+          color: #555; }
+    .video-content .extras .taxonomy .label {
+      display: inline; }
+      .video-content .extras .taxonomy .label i {
+        margin-left: .3em; }
+    .video-content .extras .taxonomy .tag-list {
+      display: inline; }
+  .video-content .last-row {
+    padding-bottom: 1em;
+    text-align: center; }
+    .video-content .last-row .like,
+    .video-content .last-row .comments-btn,
+    .video-content .last-row .share-widget {
+      display: inline-block;
+      vertical-align: middle; }
+      .video-content .last-row .like i,
+      .video-content .last-row .comments-btn i,
+      .video-content .last-row .share-widget i {
+        margin-left: .3em; }
+    .video-content .last-row .like .rate-field-container {
+      position: relative;
+      padding-left: 1.7em;
+      padding-top: .2em; }
+    .video-content .last-row .like .total-votes {
+      position: absolute;
+      color: #555; }
+    .video-content .last-row .like .thumbs {
+      font-size: 1.6em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #e21725; }
+    .video-content .last-row .comments-btn {
+      margin: 0 10vw; }
+      .video-content .last-row .comments-btn span {
+        margin-left: .2em;
+        color: #555; }
+    .video-content .last-row .share-widget {
+      position: relative; }
+      .video-content .last-row .share-widget .share-btn {
+        color: #e21725; }
+      .video-content .last-row .share-widget .share-pop {
+        position: absolute;
+        bottom: 75%;
+        right: 0;
+        min-width: 10em;
+        text-align: right; }
+        .video-content .last-row .share-widget .share-pop a {
+          font-size: 2.5em; }
+
+.comment-modal {
+  background-color: #ddd;
+  border-radius: 1em;
+  overflow: hidden;
+  box-sizing: border-box; }
+  .comment-modal.ui-widget.ui-widget-content {
+    border: none; }
+  .comment-modal .ui-dialog-titlebar {
+    background: none;
+    border: none; }
+    .comment-modal .ui-dialog-titlebar button {
+      background: none;
+      border: none; }
+  .comment-modal .ui-dialog-buttonpane {
+    background: none;
+    border: none; }
+    .comment-modal .ui-dialog-buttonpane button {
+      margin-top: 0;
+      margin-right: 0;
+      border-radius: .4em;
+      padding: .5em .5em .3em;
+      background: #e21725;
+      color: #fff;
+      font-weight: 700; }
+
+.ui-widget-overlay {
+  background: #000;
+  opacity: .8; }
 
 .player {
   background-color: #000; }
